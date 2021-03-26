@@ -1,0 +1,36 @@
+.card {
+  background-color: white;
+  padding: 5px 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.top {
+  display: flex;
+  flex: 1;
+}
+.top > .MuiAvatar-root {
+  height: 52px;
+  width: 52px;
+  margin-top: 9px;
+  margin-left: 2px;
+  margin-right: 12px;
+}
+.info {
+  flex: 1;
+  margin-top: 7px;
+}
+.info > div {
+  display: flex;
+}
+.info > div > .MuiSvgIcon-root {
+  font-size: 18px;
+}
+.middle__feed > img {
+  width: 550px;
+  object-fit: contain;
+}
+.middle__feed > p {
+  font-size: 14px;
+  color: rgb(65, 64, 64);
+  font-weight: 400;
+}

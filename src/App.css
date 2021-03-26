@@ -1,0 +1,11 @@
+.app {
+  background-color: #e7e8e4;
+  width: 100vw;
+  height: 100%;
+  padding-top: 26px;
+}
+.main__page {
+  padding: 43px 212px;
+  display: flex;
+  justify-content: space-between;
+}

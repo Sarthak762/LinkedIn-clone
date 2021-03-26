@@ -1,0 +1,49 @@
+.feed {
+  flex: 0.5;
+}
+.input {
+  background-color: white;
+  border-radius: 7px;
+}
+.input__top {
+  display: flex;
+}
+.input__top > .MuiAvatar-root {
+  margin: 10px;
+}
+.input__top > input {
+  flex: 1;
+  border-radius: 20px;
+  height: 36px;
+  margin: 10px;
+  border: 1px solid rgb(190, 193, 196);
+}
+.input__bottom {
+  display: flex;
+  padding: 5px;
+  justify-content: space-around;
+}
+.option__container {
+  flex: 0.2;
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 7px;
+  font-weight: 500;
+  font-size: 13px;
+}
+.option__container:hover {
+  background-color: rgb(207, 211, 221);
+}
+.line {
+  margin: 15px 0px;
+  width: 100%;
+  border-top: 1px solid rgb(161, 161, 161);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+}
