@@ -1,15 +1,15 @@
 import { Avatar } from "@material-ui/core";
-import { More, MoreHoriz, MoreVert, Public } from "@material-ui/icons";
+import { MoreHoriz, Public } from "@material-ui/icons";
 import React from "react";
 import "./Card.css";
-function Card() {
+function Card({ name, imageUrl, description }) {
   return (
     <div className="card">
       <div className="top">
         <Avatar />
         <div className="info">
-          <h4>Sarthak dubey</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <h4>{name}</h4>
+          <p>{description}</p>
           <div>
             <p>22hr * </p>
             <Public />
@@ -18,14 +18,8 @@ function Card() {
         <MoreHoriz />
       </div>
       <div className="middle__feed">
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam enim
-          libero minus minima?
-        </p>
-        <img
-          src="https://miro.medium.com/max/12032/0*__5nhm_2qHSrTVoZ"
-          alt=""
-        />
+        <p>{description}</p>
+        <img src={imageUrl} alt="" />
       </div>
       <div className="bottom"></div>
     </div>

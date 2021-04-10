@@ -10,8 +10,23 @@ import {
   WorkRounded,
 } from "@material-ui/icons";
 import React from "react";
+import { auth } from "./firebase";
 import "./Header.css";
+import { actions } from "./reducer";
+import { useStateValue } from "./StateProvider";
 function Header() {
+  const [{ user }, dispatch] = useStateValue();
+  const signOut = () => {
+    auth
+      .signOut()
+      .then(() => {
+        console.log("sign out successful");
+      })
+      .catch((error) => {
+        console.log("error ocurred");
+      });
+    dispatch({ type: actions.SET_USER, user: null });
+  };
   return (
     <div className="header">
       <div className="left">
@@ -46,8 +61,8 @@ function Header() {
           Notifications
         </div>
 
-        <div className="avatar">
-          <Avatar />
+        <div className="avatar" onClick={signOut}>
+          <Avatar src={user.photoURL} />
           <div className="down__arrow">
             Me <ArrowDropDownSharp />
           </div>

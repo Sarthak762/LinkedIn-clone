@@ -2,12 +2,14 @@ import { Avatar } from "@material-ui/core";
 import { Bookmark } from "@material-ui/icons";
 import React from "react";
 import "./Sidebar.css";
+import { useStateValue } from "./StateProvider";
 function Sidebar() {
+  const [{ user }, dispatch] = useStateValue();
   return (
     <div className="sidebar">
       <div className="profile">
-        <Avatar />
-        <h4>Sarthak Dubey</h4>
+        <Avatar src={user.photoURL} />
+        <h4>{user.displayName}</h4>
         <p>2nd year cse</p>
         <hr className="line" />
         <div className="info">
